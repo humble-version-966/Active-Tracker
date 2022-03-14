@@ -31,7 +31,7 @@ Regr = LinearRegression()
 Regr.fit(x_train, y_train)
 predict = Regr.predict(X_test)
 
-print(predict)
+# print(predict)
 
 plt.figure(1)
 plt.scatter(x_train,y_train)
