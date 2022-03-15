@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 
 
 df = pd.read_csv("random walk simulation/postion.csv")
+
 X = df["x_axis"].to_numpy()
 y = df["y_axis"].to_numpy()
 data = df.to_numpy()
