@@ -23,11 +23,11 @@ y_mm = mm.fit_transform(y)
 
 # #first 50 for training
 
-X_train = X_ss[:50, :]
-X_test = X_ss[50:, :]
+X_train = X_ss[:100, :]
+X_test = X_ss[100:, :]
 
-y_train = y_mm[:50, :]
-y_test = y_mm[50:, :] 
+y_train = y_mm[:100, :]
+y_test = y_mm[100:, :] 
 
 
 print("Training Shape", X_train.shape, y_train.shape)
