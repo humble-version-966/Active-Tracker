@@ -52,6 +52,7 @@ lastx = path[-1][0]
 lasty = path[-1][1]
 LSTMpoint = np.array([lastx+0.2,lasty+0.1])
 plt.scatter(LSTMpoint[0],LSTMpoint[1],5,"red")
+plt.scatter(Xo,Yo,80,"black")
 
 count = 20
 while(count > 0):
