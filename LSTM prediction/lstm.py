@@ -1,4 +1,3 @@
-import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 df = pd.read_csv("random walk simulation/postion.csv")
@@ -11,7 +10,7 @@ plt.savefig("True_Path.png")
 
 X = df.iloc[:, [0]]
 y = df.iloc[:, [1]]
-print(y)
+# print(y)
 
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 mm = MinMaxScaler()
@@ -125,10 +124,14 @@ dataY_plot = df_y_mm.data.numpy()
 
 data_predict = mm.inverse_transform(data_predict) #reverse transformation
 dataY_plot = mm.inverse_transform(dataY_plot)
+
+print("Predict Shape", data_predict.shape)
+
 plt.figure(figsize=(10,6)) #plotting
 plt.axvline(x=200, c='r', linestyle='--') #size of the training set
 plt.plot(dataY_plot, label='Actuall Data') #actual plot
 plt.plot(data_predict, label='Predicted Data') #predicted plot
+plt.scatter(100,data_predict[100],10,"red")
 plt.title('Time-Series Prediction')
 plt.legend()
 plt.savefig("LSTM prediction/lstm.png")
